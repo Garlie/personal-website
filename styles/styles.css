@@ -192,6 +192,26 @@ nav.active .hamburger-button .bot {
     margin: auto;
 }
 
+#about .skill-heading {
+    margin-top: 5rem;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+}
+
+td {
+    padding: .5rem 2rem;
+    width: 33.333%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @media (max-width: 768px) {
     .hamburger-button {
         display: flex;
@@ -232,11 +252,6 @@ nav.active .hamburger-button .bot {
 
     nav.active .navbar-links {
         animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
     }
 
     .navbar-links li a {
