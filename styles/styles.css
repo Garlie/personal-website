@@ -144,6 +144,7 @@ header h1 {
     text-align: center;
     text-decoration: .25rem underline #D22D16;
     text-underline-offset: .75rem;
+    font-size: 1.85rem;
 }
 
 #banner{
@@ -167,8 +168,8 @@ header h1 {
 }
 
 #banner h1 {
-    font-size: 2rem;
-    line-height: 1;
+    font-size: 3rem;
+    line-height: .75rem;
     letter-spacing: -0.005rem;
 }
 
@@ -230,7 +231,7 @@ header h1 {
     justify-content: center;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: .75rem .75rem 1rem #D3D3D3;
+    box-shadow: 0 0 1rem #D3D3D3;
 }
 
 #project a {
@@ -243,13 +244,14 @@ header h1 {
     color: white;
     gap: 0rem 1rem;
     border-radius: 4px;
+    transition: .3s ease background-color;
 }
 
 #project a img{
     width: 25px;
 }
 
-#project h1 {
+#project main h1 {
     font-size: 1.5rem;
 }
 
@@ -292,18 +294,12 @@ header h1 {
 
 }
 
-#contact input {
+#contact input, #contact textarea {
     padding: .5rem 1rem;
     font-size: 1rem;
     border: .12rem solid #D22D16;
     border-radius: 4px;
-}
-
-#contact textarea {
-    border: .12rem solid #D22D16;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #contact button {
@@ -315,6 +311,11 @@ header h1 {
     border: none;
     color: white;
     font-size: 1rem;
+    transition: .3s ease background-color;
+}
+
+#contact button:hover, #project a:hover{
+    background-color:#36A1D4;
 }
 
 footer {
@@ -332,9 +333,44 @@ footer p {
     bottom: 1rem;
 }
 
+/* Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+    to { clip-path: polygon(100% 100%, -200% 100%, 100% -200%); }
+}
+
+@keyframes slideLeft{
+    from { clip-path: polygon(0% 0%, 0% 0%, 0% 0%); }
+    to { clip-path: polygon(0% 0%, 200% 0%, 0% 200%); }
+}
+
+#banner article, 
+header, 
+#about p, 
+#about article {
+    opacity: 0;
+}
+
+#banner article, 
+#about p.show, 
+#about article.show {
+    opacity: 1;
+    animation: slideRight 1s ease-in;
+}
+
+header.show{
+    opacity: 1;
+    animation: slideLeft 1s ease-in;
+}
+
+#project section.show, #contact main.show {
+    transform: scale3d(1.05, 1.05, 1);
+    transition: transform 355ms cubic-bezier(0.25, 0.4, 0.45, 0.92) 0s;
 }
 
 @media (max-width: 768px) {
