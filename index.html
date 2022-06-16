@@ -141,17 +141,26 @@
     <section id="contact">
         <header>
             <h1>GET IN TOUCH</h1>
-            <a href="https://www.linkedin.com/in/minh-pham-bbbb3a23b"><img src="images/linkedin.svg">LinkedIn</a>
-            <a href="https://github.com/garlie"><img src="images/github.svg">GitHub</a>
+            <address>
+                <a href="https://www.linkedin.com/in/minh-pham-bbbb3a23b"><img src="images/linkedin.svg">LinkedIn</a>
+                <a href="https://github.com/garlie"><img src="images/github.svg">GitHub</a>
+            </address>
         </header>
         <main>
             <form action="/my-handling-form-page" method="post">
-                <input type="text" id="name" name="firstname" placeholder="Your name.." required>
-
-                <input type="email" id="email" name="email" placeholder="Email address.." required>
-                
-                <textarea id="message" id="message" name="message" placeholder="Input your message here.." required
-                rows="5" cols="33"></textarea>
+                <fieldset>
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Your Name</label>
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="email" name="email" required>
+                    <label for="email">Email Address</label>
+                </fieldset>
+                <fieldset>
+                    <textarea id="message" id="message" name="message" required
+                    rows="5" cols="33"></textarea>
+                    <label for="message">What's your message?</label>
+                </fieldset>
                 
                 <button type="submit">Send</button>
             </form>
