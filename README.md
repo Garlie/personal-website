@@ -1,2 +1,2 @@
 # personal-website
-A personal website that showcases my work as a data analyst.
+A personal website that showcases my work as a software developer.
