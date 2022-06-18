@@ -384,33 +384,23 @@ footer p {
     to { opacity: 1; }
 }
 
-@keyframes slideRight {
-    from { clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
-    to { clip-path: polygon(100% 100%, -200% 100%, 100% -200%); }
-}
-
-@keyframes slideLeft{
+@keyframes slideRight{
     from { clip-path: polygon(0% 0%, 0% 0%, 0% 0%); }
     to { clip-path: polygon(0% 0%, 200% 0%, 0% 200%); }
 }
 
-#banner article, 
-header, 
 #about p, 
-#about article {
+#about table,
+#contact address {
     opacity: 0;
 }
 
-#banner article, 
 #about p.show, 
-#about article.show {
+#about table.show,
+#contact address.show {
     opacity: 1;
-    animation: slideRight 1s ease-in;
-}
-
-header.show{
-    opacity: 1;
-    animation: slideLeft 1s ease-in;
+    -webkit-animation: slideRight 1s ease-in;
+            animation: slideRight 1s ease-in;
 }
 
 #project section.show, #contact main.show {

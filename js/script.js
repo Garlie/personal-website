@@ -3,7 +3,7 @@ const html = document.querySelector("html");
 const sections = document.querySelectorAll("section");
 const nav = document.querySelector("nav");
 const navbarLi = document.querySelectorAll("nav li");
-const animations = document.querySelectorAll("#banner article, header, #about p, #about article, #project section, #contact main");
+const animations = document.querySelectorAll("#about p, #about table, #project section, #contact main, #contact address");
 
 toggleButton.addEventListener("click", () => {
     nav.classList.toggle("active");
